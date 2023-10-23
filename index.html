@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia?</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0; /* Corregido el valor de padding */
+        }
+
+        body {
+            background: #fcfcfc;
+        }
+
+        .contenedor {
+            margin: auto;
+            width: 900px;
+            margin-top: 300px;
+            text-align: center;
+        }
+
+        .titulo {
+            margin-bottom: 20px;
+        }
+
+        .opciones p {
+            background: black;
+            display: initial;
+            padding: 12px;
+            color: #fff; /* Corregido el valor de color */
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        p.p1 {
+            position: absolute;
+            top: 400px;
+            left: 500px;
+            width: 100px;
+        }
+
+        p.p1:hover {
+            background: gray;
+            cursor: pointer;
+        }
+
+        p.p2 {
+            position: absolute;
+            top: 400px;
+            left: 750px;
+            width: 100px;
+        }
+
+        p.p2:hover {
+            background: gray;
+            cursor: pointer;
+        }
+
+        #si {
+            background: #000000;
+            position: absolute;
+            top: 122px;
+            left: 420px; /* Cambiado el orden de left y position */
+            width: 550px;
+            color: #fff;
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>¿Quieres ser mi novia?</h1>
+        </div>
+        <div class="opciones">
+            <p class="p1">No</p>
+            <p onclick="dijoSi()" class="p2">Si</p>
+            <div id="si">
+                <h2>Sabía que querrías</h2> <!-- Corregida la etiqueta H2 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.p1').hover(function () {
+                var arriba = Math.random() * (400 - 1) + 1;
+                var abajo = Math.random() * (609 - 1) + 1;
+                $(this).css('top', arriba);
+                $(this).css('left', abajo);
+            });
+        });
+
+        function dijoSi() {
+            document.getElementById('si').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
