@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8e6e8; /* Rosa suave */
+  }
+  
+  .contenedor {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative; /* Permite el movimiento dentro del contenedor */
+    height: 100vh; /* Asegura que haya suficiente espacio para moverse */
+  }
+  
+  .titulo {
+    color: #f06292; /* Rosa vibrante */
+  }
+  
+  .opciones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .opcion {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .opcion:hover {
+    background-color: #f06292;
+    color: #fff;
+  }
+  
+  .opcion.no {
+    background-color: #e8e8e8; /* Gris claro */
+    position: absolute; /* Importante para mover el botón */
+  }
+  
+  .mensaje-confirmacion {
+    background-color: #fff;
+    border: 2px solid #f06292;
+    padding: 20px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 80%;
+    text-align: center;
+  }
+  
