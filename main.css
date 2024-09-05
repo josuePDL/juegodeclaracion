@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f8e6e8; /* Rosa suave */
+    background-image: url('icons8-hello-kitty-50\ \(1\).png'); /* Imagen de fondo */
+    background-repeat: repeat; /* Repetir la imagen en todo el fondo */
+    background-size: auto;
   }
   
   .contenedor {
